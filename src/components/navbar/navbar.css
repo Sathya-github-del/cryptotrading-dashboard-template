@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #0052FF;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(20deg);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+    transition: scale 0.5s ease;
+}
+
+.logo img:hover {
+    scale: 1.1;
+    transition: 0.5s ease;
+}
+
+.side-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.side-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 650;
+    font-family: 'Sintony', sans-serif;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.side-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #646cff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.side-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.side-links a:hover {
+    color: #646cff;
+}
+
+.wallet {
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.wallet a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Helvetica', sans-serif;
+    list-style: none;
+}
+
+.wallet:hover {
+    background-color: #646cff;
+    transition: all 0.3s ease;
+}
